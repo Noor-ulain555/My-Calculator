@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/data_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/Result_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAlignment="viewEnd"
+            android:textSize="28dp"
+            android:layout_marginEnd="12dp"
+            />
+
+
+        <TextView
+            android:id="@+id/Result_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="28dp"
+            android:visibility="gone"
+            android:layout_marginEnd="12dp"
+            android:textColor="#787474"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view1"
+            android:textAlignment="viewEnd"
+            />
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginBottom="9dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/linearlayout1"
+            tools:layout_editor_absoluteX="8dp" />
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/clear"
+                    style="@style/OperatorButton"
+                    android:text="C"
+                    android:onClick="OnClearClick"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/backspace"
+                    style="@style/OperatorButton"
+                    android:onClick="OnBackSpaceClick"
+                    app:icon="@drawable/baseline_backspace_24"
+
+                    app:iconTint="@color/yellow"
+                    tools:ignore="SpeakableTextPresentCheck" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/OperatorButton"
+                    android:id="@+id/mode"
+                    android:onClick="onPercentageClick"
+                    android:text="%"
+
+                    />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/OperatorButton"
+                    android:id="@+id/divide"
+                    android:onClick="onOperatorclick"
+
+                    android:text="/" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn7"
+                    android:onClick="onDigitclick"
+                    android:text="7" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn8"
+
+                    android:onClick="onDigitclick"
+                    android:text="8" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn9"
+
+                    android:onClick="onDigitclick"
+                    android:text="9" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/OperatorButton"
+                    android:id="@+id/btnMultiply"
+                    android:onClick="onOperatorclick"
+
+                    android:text="*" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn4"
+
+                    android:onClick="onDigitclick"
+                    android:text="4" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn5"
+
+                    android:onClick="onDigitclick"
+                    android:text="5" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn6"
+
+                    android:onClick="onDigitclick"
+                    android:text="6" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/OperatorButton"
+                    android:id="@+id/btnPlus"
+                    android:onClick="onOperatorclick"
+
+                    android:text="+" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn1"
+
+                    android:onClick="onDigitclick"
+                    android:text="1" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn2"
+
+                    android:onClick="onDigitclick"
+                    android:text="2" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn3"
+
+                    android:onClick="onDigitclick"
+                    android:text="3" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/OperatorButton"
+                    android:id="@+id/btnSub"
+                    android:onClick="onOperatorclick"
+
+                    android:text="-" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/OperatorButton"
+                    android:id="@+id/btnAC"
+
+                    android:onClick="onAllClearclick"
+                    android:textSize="20dp"
+                    android:text="AC" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btn0"
+
+                    android:onClick="onDigitclick"
+                    android:text="0" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/digitButton"
+                    android:id="@+id/btnDot"
+
+                    android:onClick="onDigitclick"
+                    android:text="." />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/OperatorButton"
+                    android:id="@+id/btnEqual"
+                    android:backgroundTint="@color/yellow"
+                    android:textColor="@color/white"
+                    android:onClick="onEqualclick"
+                    android:text="=" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
